@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="event" type="event"/>
+
+  <xs:complexType name="event">
+    <xs:sequence>
+      <xs:element name="eventName" type="xs:string" minOccurs="0"/>
+      <xs:element name="basePrice" type="xs:string" minOccurs="0"/>
+      <xs:element name="rating" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="eventId" type="xs:int"/>
+  </xs:complexType>
+</xs:schema>

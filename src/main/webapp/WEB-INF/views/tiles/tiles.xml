@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+	<!-- Base Definition -->
+	<definition name="base-definition"
+		template="/WEB-INF/views/tiles/layouts/defaultLayout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header"
+			value="/WEB-INF/views/tiles/template/defaultHeader.jsp" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/tiles/template/defaultMenu.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer"
+			value="/WEB-INF/views/tiles/template/defaultFooter.jsp" />
+	</definition>
+
+	<!-- Home Page -->
+	<definition name="home" extends="base-definition">
+		<put-attribute name="title" value="Welcome" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/home.jsp" />
+	</definition>
+
+	<!-- Product Page -->
+	<definition name="products" extends="base-definition">
+		<put-attribute name="title" value="Products" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/products.jsp" />
+	</definition>
+
+	<!-- Contact-us Page -->
+	<definition name="contactus" extends="base-definition">
+		<put-attribute name="title" value="Contact Us" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/contactus.jsp" />
+	</definition>
+
+	<!-- Contact-us Page -->
+	<definition name="login" extends="base-definition">
+		<put-attribute name="title" value="Login" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/login.jsp" />
+	</definition>
+
+	<!-- Event Page -->
+	<definition name="event" extends="base-definition">
+		<put-attribute name="title" value="Event" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/event/event.jsp" />
+	</definition>
+
+	<!-- Event-edit Page -->
+	<definition name="event-edit" extends="base-definition">
+		<put-attribute name="title" value="Event edit" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/event/event-edit.jsp" />
+	</definition>
+
+	<!-- Event-delete Page -->
+	<definition name="event-delete" extends="base-definition">
+		<put-attribute name="title" value="Event delete" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/event/event-delete.jsp" />
+	</definition>
+
+	<!-- Event-save Page -->
+	<definition name="save" extends="base-definition">
+		<put-attribute name="title" value="Save" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/event/event-save.jsp" />
+	</definition>
+	
+	<!-- Event Schedule Page -->
+	<definition name="event-schedule" extends="base-definition">
+		<put-attribute name="title" value="Event Schedule" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/event-schedule/event-schedule.jsp" />
+	</definition>
+	
+	<!-- Booking Page -->
+	<definition name="booking" extends="base-definition">
+		<put-attribute name="title" value="Booking" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/booking/booking.jsp" />
+	</definition>
+	
+	<!-- Ticket Page -->
+	<definition name="ticket" extends="base-definition">
+		<put-attribute name="title" value="Ticket" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/ticket/ticket.jsp" />
+	</definition>
+		<!-- Book Ticket Page -->
+	<definition name="book-ticket" extends="base-definition">
+		<put-attribute name="title" value="Book Ticket" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/ticket/book-ticket.jsp" />
+	</definition>
+	
+		<!-- Customer Page -->
+	<definition name="customer" extends="base-definition">
+		<put-attribute name="title" value="Customer" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/customer/customer.jsp" />
+	</definition>
+	
+			<!-- Counter Page -->
+	<definition name="counter" extends="base-definition">
+		<put-attribute name="title" value="Counter" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/counter/counter.jsp" />
+	</definition>
+		
+			<!-- Upload Page -->
+	<definition name="upload" extends="base-definition">
+		<put-attribute name="title" value="Upload Form" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/upload.jsp" />
+	</definition>
+	
+			<!-- CustomerAccount Page -->
+	<definition name="customer-account" extends="base-definition">
+		<put-attribute name="title" value="Сustomer-account" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/customer-account/customer-account.jsp" />
+	</definition>
+	
+				<!-- Error Page -->
+	<definition name="error" extends="base-definition">
+		<put-attribute name="title" value="Error" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/error.jsp" />
+	</definition>
+	
+</tiles-definitions>

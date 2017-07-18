@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://impl.service.theatre.epam.com/" xmlns:tns="http://impl.service.theatre.epam.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="delete" type="tns:delete"/>
+
+  <xs:element name="deleteResponse" type="tns:deleteResponse"/>
+
+  <xs:element name="getAll" type="tns:getAll"/>
+
+  <xs:element name="getAllByName" type="tns:getAllByName"/>
+
+  <xs:element name="getAllByNameResponse" type="tns:getAllByNameResponse"/>
+
+  <xs:element name="getAllResponse" type="tns:getAllResponse"/>
+
+  <xs:element name="getBookedTickets" type="tns:getBookedTickets"/>
+
+  <xs:element name="getBookedTicketsResponse" type="tns:getBookedTicketsResponse"/>
+
+  <xs:element name="getByEmail" type="tns:getByEmail"/>
+
+  <xs:element name="getByEmailResponse" type="tns:getByEmailResponse"/>
+
+  <xs:element name="getById" type="tns:getById"/>
+
+  <xs:element name="getByIdResponse" type="tns:getByIdResponse"/>
+
+  <xs:element name="save" type="tns:save"/>
+
+  <xs:element name="saveAll" type="tns:saveAll"/>
+
+  <xs:element name="saveAllResponse" type="tns:saveAllResponse"/>
+
+  <xs:element name="saveResponse" type="tns:saveResponse"/>
+
+  <xs:element name="update" type="tns:update"/>
+
+  <xs:element name="updateResponse" type="tns:updateResponse"/>
+
+  <xs:element name="user" type="tns:user"/>
+
+  <xs:complexType name="getById">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getByIdResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:user" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="user">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string" minOccurs="0"/>
+      <xs:element name="email" type="xs:string" minOccurs="0"/>
+      <xs:element name="birthDay" type="xs:string" minOccurs="0"/>
+      <xs:element name="password" type="xs:string" minOccurs="0"/>
+      <xs:element name="roles" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:int"/>
+  </xs:complexType>
+
+  <xs:complexType name="getAllByName">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getAllByNameResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:user" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getBookedTickets">
+    <xs:sequence>
+      <xs:element name="arg0" type="tns:user" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getBookedTicketsResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:ticket" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ticket">
+    <xs:sequence>
+      <xs:element name="eventId" type="xs:int" minOccurs="0"/>
+      <xs:element name="id" type="xs:int" minOccurs="0"/>
+      <xs:element name="isPurchased" type="xs:boolean" minOccurs="0"/>
+      <xs:element name="seat" type="xs:int" minOccurs="0"/>
+      <xs:element name="userId" type="xs:int" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="saveAll">
+    <xs:sequence>
+      <xs:element name="arg0" type="tns:user" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="saveAllResponse">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="getByEmail">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getByEmailResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:user" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getAll">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="getAllResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:user" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="delete">
+    <xs:sequence>
+      <xs:element name="arg0" type="tns:user" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="deleteResponse">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="update">
+    <xs:sequence>
+      <xs:element name="arg0" type="tns:user" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateResponse">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="save">
+    <xs:sequence>
+      <xs:element name="arg0" type="tns:user" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="saveResponse">
+    <xs:sequence/>
+  </xs:complexType>
+</xs:schema>
+

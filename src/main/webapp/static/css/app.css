@@ -1,0 +1,122 @@
+html{
+	background-color:#2F2F2F;
+}
+
+body{
+	height: 100%;
+	background-color:rgb(245, 245, 245);
+}
+
+
+#header {
+    margin-left:20%;
+    top: 0px;
+    width: 80%;
+	height: 100px;
+	position: fixed;
+	font-family: 'bgMed',arial,helvetica,sans-serif;
+    font-size: 0.6em;
+    color: #fff;
+    z-index: 15;
+    text-transform: uppercase;
+    background-color: #CCC;
+    padding-top:20px;
+    text-align:center;
+}
+
+#footer {
+	margin-left:20%;
+    left: 0px;
+    bottom: 0px;
+    width: 80%;
+	height: 10%;
+	position: fixed;
+	font-family: 'bgMed',arial,helvetica,sans-serif;
+    font-size: 0.6em;
+    color: #fff;
+    z-index: 15;
+    text-transform: uppercase;
+    background-color: #272727;
+	padding-top:20px;   
+    text-align:center;
+}
+
+
+#sidemenu {
+    width: 20%;
+    background-color:#CCC;
+    height: 100%;
+    overflow: auto;
+    float: left;
+    z-index: 20;
+    position: fixed;
+    left: 0px;
+    margin-top:
+}
+
+#sidemenu #menu {
+    color: #333;
+    text-align: right;
+    list-style-type: none;
+    margin-right: 40px;
+    float: right;
+}
+
+#sidemenu #menu li {
+    width: 150px;
+    height: 35px;
+    font-size: 12px;
+    padding-right:5px;
+}
+
+#sidemenu #menu li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #333;
+}
+
+#sidemenu #menu li:hover {
+    background-color: #EEE;
+}
+
+.logo{
+	float:left;
+}
+
+#site-content {
+    width: 80%;
+    height: 100%;
+    overflow: auto;
+    float: left;
+    z-index: 20;
+    position: fixed;
+    min-height: 600px;
+    margin-top:10%;
+    margin-bottom:10%;
+    margin-left:20%;
+    padding-left:10px;
+    text-align:center;
+}
+    
+.classic-table {
+	width: 80%;
+	border: 1px solid black;
+	}
+
+.classic-table tr {
+	background: #f3f3f3;
+	height:30px;
+	border: 1px solid black;
+}
+
+.classic-table td {
+	width: 20px;
+	border: 1px solid black;
+	text-align:center;
+}
+
+.classic-table th {
+	width: 20px;
+	border: 1px solid black;
+	text-align:center;
+}
