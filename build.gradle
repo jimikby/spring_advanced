@@ -48,11 +48,6 @@ dependencies {
 
 war {
 	archiveName = "${archivesBaseName}.war"
-
-	webXml = file('src/resources/web.xml')
-
 	classpath configurations.compile	
-	webInf {
-		into('config') { from file('src/resources/log4j.xml')}
-	}
+	into('webapp') { from file('src/main/static')}
 }
